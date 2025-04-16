@@ -13,6 +13,7 @@ class ShopListViewModel: ObservableObject {
     @Published private(set) var errorMessage: String?
     @Published private(set) var categories: [String] = []
     @Published private(set) var filteredProducts: [Product] = []
+    @Published var isLoading: Bool = false
     @Published var searchText: String = ""
     @Published var selectedFilter: String = "" {
         didSet {
@@ -35,16 +36,18 @@ class ShopListViewModel: ObservableObject {
     
     func fetchProducts() {
         errorMessage = nil
+        isLoading = true
         useCase.fetchShopList()
             .receive(on: DispatchQueue.main)
             .sink(
                 receiveCompletion: { [weak self] completion in
-                    guard let self = self else { return }
+                    self?.isLoading = false
                     if case .failure(let error) = completion {
-                        self.errorMessage = error.localizedDescription
+                        self?.errorMessage = error.localizedDescription
                     }
                 },
                 receiveValue: { [weak self] products in
+                    self?.isLoading = false
                     self?.products = products
                     self?.filteredProducts = products
                     self?.categories = self?.extractCategories(from: products) ?? []
@@ -59,7 +62,6 @@ class ShopListViewModel: ObservableObject {
             ? products
             : products.filter { $0.category.capitalized == category }
 
-        // Si hay texto de búsqueda, se filtrará después con applySearch()
         if searchText.isEmpty {
             filteredProducts = base
         } else {

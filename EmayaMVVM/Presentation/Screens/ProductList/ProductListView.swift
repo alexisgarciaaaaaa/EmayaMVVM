@@ -23,7 +23,7 @@ struct ProductListView: View {
             VStack(alignment: .leading, spacing: 16) {
                 
                 HStack {
-                    Text("DISCOVER")
+                    Text("Shop App")
                         .font(.largeTitle.bold())
 
                     Spacer()
@@ -66,22 +66,37 @@ struct ProductListView: View {
                     .padding(.horizontal)
                 }
                 
-                if viewModel.hasNoResults {
-                    Spacer()
-                    EmptySearchView {
-                        viewModel.searchText = ""
-                    }
-                } else {
+                if viewModel.isLoading {
                     ScrollView {
                         LazyVStack(spacing: 24) {
-                            ForEach(viewModel.filteredProducts) { product in
-                                NavigationLink(destination: ProductDetailView(product: product)) {
-                                    ProductCardView(product: product)
-                                }
+                            ForEach(0..<6, id: \.self) { _ in
+                                SkeletonCardView()
+                                    .padding(.horizontal)
                             }
                         }
-                        .padding(.horizontal)
-                        .padding(.bottom)
+                    }
+                } else if let error = viewModel.errorMessage {
+                    ErrorStateView(message: error) {
+                        viewModel.fetchProducts()
+                    }
+                } else {
+                    if viewModel.hasNoResults {
+                        Spacer()
+                        EmptySearchView {
+                            viewModel.searchText = ""
+                        }
+                    } else {
+                        ScrollView {
+                            LazyVStack(spacing: 24) {
+                                ForEach(viewModel.filteredProducts) { product in
+                                    NavigationLink(destination: ProductDetailView(product: product)) {
+                                        ProductCardView(product: product)
+                                    }
+                                }
+                            }
+                            .padding(.horizontal)
+                            .padding(.bottom)
+                        }
                     }
                 }
             }

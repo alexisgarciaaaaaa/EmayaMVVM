@@ -30,9 +30,7 @@ struct FavoritesView: View {
             .padding(.horizontal)
             if favoritesManager.favorites.isEmpty {
                 Spacer()
-                Text("No favorites yet.")
-                    .foregroundColor(.gray)
-                    .padding()
+                EmptyFavoritesView()
                 Spacer()
             } else {
                 ScrollView {
