@@ -76,9 +76,11 @@ struct ProductListView: View {
                         }
                     }
                 } else if let error = viewModel.errorMessage {
+                    Spacer()
                     ErrorStateView(message: error) {
                         viewModel.fetchProducts()
                     }
+                    Spacer()
                 } else {
                     if viewModel.hasNoResults {
                         Spacer()
