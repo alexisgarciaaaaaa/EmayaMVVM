@@ -6,12 +6,26 @@
 //
 
 import SwiftUI
+import TipKit
 
 @main
 struct EmayaProductCatalogAppApp: App {
+    @StateObject private var favoritesManager = FavoritesManager()
+    init() {
+        do {
+            try Tips.configure([
+                .displayFrequency(.monthly),
+                .datastoreLocation(.applicationDefault)
+            ])
+        }
+        catch {
+            print("Error initializing tips: \(error)")
+        }
+    }
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            SplashView()
+                .environmentObject(favoritesManager)
         }
     }
 }
