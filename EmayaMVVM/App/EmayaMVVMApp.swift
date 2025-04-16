@@ -11,7 +11,7 @@ import SwiftUI
 struct EmayaProductCatalogAppApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ProductListView()
         }
     }
 }
