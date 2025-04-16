@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ProductListView: View {
-    
+    @EnvironmentObject var favoritesManager: FavoritesManager
     @StateObject private var viewModel: ShopListViewModel
     
     init(viewModel: ShopListViewModel = ShopListViewModel(useCase: UseShopListService())) {
@@ -25,8 +25,16 @@ struct ProductListView: View {
                 HStack {
                     Text("DISCOVER")
                         .font(.largeTitle.bold())
-                    
+
                     Spacer()
+
+                    NavigationLink(destination: FavoritesView().environmentObject(favoritesManager)) {
+                        Image(systemName: "heart.fill")
+                            .foregroundColor(.black)
+                            .padding(8)
+                            .background(Color(.systemGray5))
+                            .clipShape(Circle())
+                    }
                 }
                 .padding(.horizontal)
 
@@ -63,12 +71,13 @@ struct ProductListView: View {
                     EmptySearchView {
                         viewModel.searchText = ""
                     }
-                    .padding(.bottom, 200)
                 } else {
                     ScrollView {
                         LazyVStack(spacing: 24) {
                             ForEach(viewModel.filteredProducts) { product in
-                                ProductCardView(product: product)
+                                NavigationLink(destination: ProductDetailView(product: product)) {
+                                    ProductCardView(product: product)
+                                }
                             }
                         }
                         .padding(.horizontal)

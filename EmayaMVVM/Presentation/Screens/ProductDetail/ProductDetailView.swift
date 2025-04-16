@@ -8,12 +8,9 @@
 import SwiftUI
 
 struct ProductDetailView: View {
+    @EnvironmentObject var favoritesManager: FavoritesManager
+    @Environment(\.dismiss) private var dismiss
     let product: Product
-    @State private var selectedColorIndex = 0
-    @State private var selectedSize = "9.5"
-
-    let colors: [Color] = [.gray, .black, .blue, .white]
-    let sizes: [String] = ["8.5", "9", "9.5", "10", "10.5"]
 
     var body: some View {
         VStack(spacing: 20) {
@@ -23,23 +20,29 @@ struct ProductDetailView: View {
                     .frame(width: 32, height: 32)
                     .background(Color.black)
                     .clipShape(RoundedRectangle(cornerRadius: 8))
+                    .onTapGesture {
+                        dismiss()
+                    }
                 Spacer()
             }
             .padding(.horizontal)
 
-            AsyncImage(url: URL(string: product.image)) { phase in
-                if let image = phase.image {
-                    image
-                        .resizable()
-                        .scaledToFit()
-                        .frame(height: 220)
-                        .shadow(radius: 10)
-                } else {
-                    ProgressView()
-                        .frame(height: 220)
+            if let url = URL(string: product.image) {
+                CachedAsyncImage(url: url) {
+                    AnyView(
+                        ProgressView()
+                            .frame(height: 220)
+                    )
+                } image: { uiImage in
+                    AnyView(
+                        Image(uiImage: uiImage)
+                            .resizable()
+                            .scaledToFit()
+                            .frame(height: 220)
+                            .shadow(radius: 10)
+                    )
                 }
             }
-
             VStack(alignment: .leading, spacing: 4) {
                 Text(product.category.capitalized)
                     .font(.subheadline)
@@ -49,60 +52,6 @@ struct ProductDetailView: View {
                     .foregroundColor(.black)
             }
             .frame(maxWidth: .infinity, alignment: .leading)
-            .padding(.horizontal)
-
-            HStack {
-                VStack(alignment: .leading) {
-                    Text("Color")
-                        .font(.headline)
-                    HStack {
-                        ForEach(colors.indices, id: \.self) { index in
-                            ZStack {
-                                Circle()
-                                    .fill(colors[index])
-                                    .frame(width: 30, height: 30)
-                                if selectedColorIndex == index {
-                                    Image(systemName: "checkmark")
-                                        .foregroundColor(.white)
-                                }
-                            }
-                            .onTapGesture {
-                                selectedColorIndex = index
-                            }
-                        }
-                    }
-                }
-                .padding(.horizontal)
-                
-                Spacer()
-            }
-
-            VStack(alignment: .leading) {
-                HStack {
-                    Text("Size")
-                        .font(.headline)
-                    Spacer()
-                    Text("UK")
-                        .foregroundColor(.gray)
-                        .font(.subheadline)
-                }
-                ScrollView(.horizontal, showsIndicators: false) {
-                    HStack {
-                        ForEach(sizes, id: \.self) { size in
-                            Text(size)
-                                .padding()
-                                .background(
-                                    RoundedRectangle(cornerRadius: 10)
-                                        .fill(size == selectedSize ? .black : .gray.opacity(0.2))
-                                )
-                                .foregroundColor(size == selectedSize ? .white : .black)
-                                .onTapGesture {
-                                    selectedSize = size
-                                }
-                        }
-                    }
-                }
-            }
             .padding(.horizontal)
             
             VStack(alignment: .leading, spacing: 8) {
@@ -123,18 +72,19 @@ struct ProductDetailView: View {
                     .font(.title3.bold())
                 Spacer()
                 Button(action: {
-                    print("Added to bag")
+                    favoritesManager.toggleFavorite(product)
                 }) {
-                    Image(systemName: "heart.fill")
-                        .foregroundColor(.white)
-                        .frame(width: 32, height: 32)
-                        .background(Color.black)
-                        .clipShape(RoundedRectangle(cornerRadius: 8))
+                    Image(systemName: favoritesManager.isFavorite(product) ? "heart.fill" : "heart")
+                           .foregroundColor(.white)
+                           .frame(width: 32, height: 32)
+                           .background(Color.black)
+                           .clipShape(RoundedRectangle(cornerRadius: 8))
                 }
             }
             .padding()
         }
         .padding(.top)
+        .navigationBarBackButtonHidden()
     }
 }
 

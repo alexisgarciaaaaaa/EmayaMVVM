@@ -8,11 +8,12 @@
 import SwiftUI
 
 struct ProductCardView: View {
+    @EnvironmentObject var favoritesManager: FavoritesManager
     let product: Product
     
     var body: some View {
         HStack(spacing: 16) {
-
+            
             if let url = URL(string: product.image) {
                 CachedAsyncImage(url: url) {
                     AnyView(
@@ -48,12 +49,14 @@ struct ProductCardView: View {
 
                     Spacer()
 
-                    Button(action: {}) {
-                        Image(systemName: "heart.fill")
-                            .foregroundColor(.white)
-                            .frame(width: 32, height: 32)
-                            .background(Color.black)
-                            .clipShape(RoundedRectangle(cornerRadius: 8))
+                    Button(action: {
+                        favoritesManager.toggleFavorite(product)
+                    }) {
+                        Image(systemName: favoritesManager.isFavorite(product) ? "heart.fill" : "heart")
+                               .foregroundColor(.white)
+                               .frame(width: 32, height: 32)
+                               .background(Color.black)
+                               .clipShape(RoundedRectangle(cornerRadius: 8))
                     }
                 }
             }
