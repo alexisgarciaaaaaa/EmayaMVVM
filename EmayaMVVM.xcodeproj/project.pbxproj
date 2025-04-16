@@ -1,0 +1,563 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		14EA5BEE2DAF37C700C0BD57 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14EA5BD52DAF37C600C0BD57 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 14EA5BDC2DAF37C600C0BD57;
+			remoteInfo = EmayaMVVM;
+		};
+		14EA5BF82DAF37C700C0BD57 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14EA5BD52DAF37C600C0BD57 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 14EA5BDC2DAF37C600C0BD57;
+			remoteInfo = EmayaMVVM;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		14EA5BDD2DAF37C600C0BD57 /* EmayaMVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmayaMVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		14EA5BED2DAF37C700C0BD57 /* EmayaMVVMTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmayaMVVMTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		14EA5BF72DAF37C700C0BD57 /* EmayaMVVMUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmayaMVVMUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		14EA5BDF2DAF37C600C0BD57 /* EmayaMVVM */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = EmayaMVVM;
+			sourceTree = "<group>";
+		};
+		14EA5BF02DAF37C700C0BD57 /* EmayaMVVMTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = EmayaMVVMTests;
+			sourceTree = "<group>";
+		};
+		14EA5BFA2DAF37C700C0BD57 /* EmayaMVVMUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = EmayaMVVMUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		14EA5BDA2DAF37C600C0BD57 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14EA5BEA2DAF37C700C0BD57 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14EA5BF42DAF37C700C0BD57 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		14EA5BD42DAF37C600C0BD57 = {
+			isa = PBXGroup;
+			children = (
+				14EA5BDF2DAF37C600C0BD57 /* EmayaMVVM */,
+				14EA5BF02DAF37C700C0BD57 /* EmayaMVVMTests */,
+				14EA5BFA2DAF37C700C0BD57 /* EmayaMVVMUITests */,
+				14EA5BDE2DAF37C600C0BD57 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		14EA5BDE2DAF37C600C0BD57 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14EA5BDD2DAF37C600C0BD57 /* EmayaMVVM.app */,
+				14EA5BED2DAF37C700C0BD57 /* EmayaMVVMTests.xctest */,
+				14EA5BF72DAF37C700C0BD57 /* EmayaMVVMUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		14EA5BDC2DAF37C600C0BD57 /* EmayaMVVM */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 14EA5C012DAF37C700C0BD57 /* Build configuration list for PBXNativeTarget "EmayaMVVM" */;
+			buildPhases = (
+				14EA5BD92DAF37C600C0BD57 /* Sources */,
+				14EA5BDA2DAF37C600C0BD57 /* Frameworks */,
+				14EA5BDB2DAF37C600C0BD57 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				14EA5BDF2DAF37C600C0BD57 /* EmayaMVVM */,
+			);
+			name = EmayaMVVM;
+			packageProductDependencies = (
+			);
+			productName = EmayaMVVM;
+			productReference = 14EA5BDD2DAF37C600C0BD57 /* EmayaMVVM.app */;
+			productType = "com.apple.product-type.application";
+		};
+		14EA5BEC2DAF37C700C0BD57 /* EmayaMVVMTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 14EA5C042DAF37C700C0BD57 /* Build configuration list for PBXNativeTarget "EmayaMVVMTests" */;
+			buildPhases = (
+				14EA5BE92DAF37C700C0BD57 /* Sources */,
+				14EA5BEA2DAF37C700C0BD57 /* Frameworks */,
+				14EA5BEB2DAF37C700C0BD57 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				14EA5BEF2DAF37C700C0BD57 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				14EA5BF02DAF37C700C0BD57 /* EmayaMVVMTests */,
+			);
+			name = EmayaMVVMTests;
+			packageProductDependencies = (
+			);
+			productName = EmayaMVVMTests;
+			productReference = 14EA5BED2DAF37C700C0BD57 /* EmayaMVVMTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		14EA5BF62DAF37C700C0BD57 /* EmayaMVVMUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 14EA5C072DAF37C700C0BD57 /* Build configuration list for PBXNativeTarget "EmayaMVVMUITests" */;
+			buildPhases = (
+				14EA5BF32DAF37C700C0BD57 /* Sources */,
+				14EA5BF42DAF37C700C0BD57 /* Frameworks */,
+				14EA5BF52DAF37C700C0BD57 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				14EA5BF92DAF37C700C0BD57 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				14EA5BFA2DAF37C700C0BD57 /* EmayaMVVMUITests */,
+			);
+			name = EmayaMVVMUITests;
+			packageProductDependencies = (
+			);
+			productName = EmayaMVVMUITests;
+			productReference = 14EA5BF72DAF37C700C0BD57 /* EmayaMVVMUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		14EA5BD52DAF37C600C0BD57 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1620;
+				LastUpgradeCheck = 1620;
+				TargetAttributes = {
+					14EA5BDC2DAF37C600C0BD57 = {
+						CreatedOnToolsVersion = 16.2;
+					};
+					14EA5BEC2DAF37C700C0BD57 = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = 14EA5BDC2DAF37C600C0BD57;
+					};
+					14EA5BF62DAF37C700C0BD57 = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = 14EA5BDC2DAF37C600C0BD57;
+					};
+				};
+			};
+			buildConfigurationList = 14EA5BD82DAF37C600C0BD57 /* Build configuration list for PBXProject "EmayaMVVM" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 14EA5BD42DAF37C600C0BD57;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 14EA5BDE2DAF37C600C0BD57 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				14EA5BDC2DAF37C600C0BD57 /* EmayaMVVM */,
+				14EA5BEC2DAF37C700C0BD57 /* EmayaMVVMTests */,
+				14EA5BF62DAF37C700C0BD57 /* EmayaMVVMUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		14EA5BDB2DAF37C600C0BD57 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14EA5BEB2DAF37C700C0BD57 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14EA5BF52DAF37C700C0BD57 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		14EA5BD92DAF37C600C0BD57 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14EA5BE92DAF37C700C0BD57 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14EA5BF32DAF37C700C0BD57 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		14EA5BEF2DAF37C700C0BD57 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 14EA5BDC2DAF37C600C0BD57 /* EmayaMVVM */;
+			targetProxy = 14EA5BEE2DAF37C700C0BD57 /* PBXContainerItemProxy */;
+		};
+		14EA5BF92DAF37C700C0BD57 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 14EA5BDC2DAF37C600C0BD57 /* EmayaMVVM */;
+			targetProxy = 14EA5BF82DAF37C700C0BD57 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		14EA5BFF2DAF37C700C0BD57 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		14EA5C002DAF37C700C0BD57 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		14EA5C022DAF37C700C0BD57 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"EmayaMVVM/Preview Content\"";
+				DEVELOPMENT_TEAM = ASR8D44L2N;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = innova.EmayaMVVM;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		14EA5C032DAF37C700C0BD57 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"EmayaMVVM/Preview Content\"";
+				DEVELOPMENT_TEAM = ASR8D44L2N;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = innova.EmayaMVVM;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		14EA5C052DAF37C700C0BD57 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ASR8D44L2N;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = innova.EmayaMVVMTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EmayaMVVM.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/EmayaMVVM";
+			};
+			name = Debug;
+		};
+		14EA5C062DAF37C700C0BD57 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ASR8D44L2N;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = innova.EmayaMVVMTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EmayaMVVM.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/EmayaMVVM";
+			};
+			name = Release;
+		};
+		14EA5C082DAF37C700C0BD57 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ASR8D44L2N;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = innova.EmayaMVVMUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = EmayaMVVM;
+			};
+			name = Debug;
+		};
+		14EA5C092DAF37C700C0BD57 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ASR8D44L2N;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = innova.EmayaMVVMUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = EmayaMVVM;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		14EA5BD82DAF37C600C0BD57 /* Build configuration list for PBXProject "EmayaMVVM" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14EA5BFF2DAF37C700C0BD57 /* Debug */,
+				14EA5C002DAF37C700C0BD57 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		14EA5C012DAF37C700C0BD57 /* Build configuration list for PBXNativeTarget "EmayaMVVM" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14EA5C022DAF37C700C0BD57 /* Debug */,
+				14EA5C032DAF37C700C0BD57 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		14EA5C042DAF37C700C0BD57 /* Build configuration list for PBXNativeTarget "EmayaMVVMTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14EA5C052DAF37C700C0BD57 /* Debug */,
+				14EA5C062DAF37C700C0BD57 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		14EA5C072DAF37C700C0BD57 /* Build configuration list for PBXNativeTarget "EmayaMVVMUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14EA5C082DAF37C700C0BD57 /* Debug */,
+				14EA5C092DAF37C700C0BD57 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 14EA5BD52DAF37C600C0BD57 /* Project object */;
+}
