@@ -6,11 +6,12 @@
 //
 
 import SwiftUI
+import TipKit
 
 struct ProductListView: View {
     @EnvironmentObject var favoritesManager: FavoritesManager
     @StateObject private var viewModel: ShopListViewModel
-    
+    let hiddenFeatureTip = AddToFavoritesTip()
     init(viewModel: ShopListViewModel = ShopListViewModel(useCase: UseShopListService())) {
         let isUITesting = ProcessInfo.processInfo.arguments.contains("--uitesting")
         let mockService = MockShopListService()
@@ -27,13 +28,15 @@ struct ProductListView: View {
                         .font(.largeTitle.bold())
 
                     Spacer()
-
-                    NavigationLink(destination: FavoritesView().environmentObject(favoritesManager)) {
-                        Image(systemName: "heart.fill")
-                            .foregroundColor(.black)
-                            .padding(8)
-                            .background(Color(.systemGray5))
-                            .clipShape(Circle())
+                    HStack {
+                        TipView(hiddenFeatureTip, arrowEdge: .trailing)
+                        NavigationLink(destination: FavoritesView().environmentObject(favoritesManager)) {
+                            Image(systemName: "heart.fill")
+                                .foregroundColor(.black)
+                                .padding(8)
+                                .background(Color(.systemGray5))
+                                .clipShape(Circle())
+                        }
                     }
                 }
                 .padding(.horizontal)
