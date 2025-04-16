@@ -12,7 +12,7 @@ struct EmayaProductCatalogAppApp: App {
     @StateObject private var favoritesManager = FavoritesManager()
     var body: some Scene {
         WindowGroup {
-            ProductListView()
+            SplashView()
                 .environmentObject(favoritesManager)
         }
     }
