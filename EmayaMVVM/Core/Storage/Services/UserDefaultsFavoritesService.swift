@@ -7,19 +7,23 @@
 
 import Foundation
 
-import Foundation
-
 final class UserDefaultsFavoritesService: FavoritesServiceProtocol {
-    private let key = "favorite_products"
+    private let key: String
+    private let userDefaults: UserDefaults
+
+    init(userDefaults: UserDefaults = .standard, key: String = "favorite_products") {
+        self.userDefaults = userDefaults
+        self.key = key
+    }
 
     func loadFavorites() -> [Product] {
-        guard let data = UserDefaults.standard.data(forKey: key) else { return [] }
+        guard let data = userDefaults.data(forKey: key) else { return [] }
         return (try? JSONDecoder().decode([Product].self, from: data)) ?? []
     }
 
     func saveFavorites(_ favorites: [Product]) {
         if let data = try? JSONEncoder().encode(favorites) {
-            UserDefaults.standard.set(data, forKey: key)
+            userDefaults.set(data, forKey: key)
         }
     }
 
@@ -37,4 +41,3 @@ final class UserDefaultsFavoritesService: FavoritesServiceProtocol {
         saveFavorites(current)
     }
 }
-

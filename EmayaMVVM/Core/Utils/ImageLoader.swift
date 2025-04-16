@@ -8,7 +8,7 @@
 import SwiftUI
 import Combine
 
-class ImageLoader: ObservableObject {
+final class ImageLoader: ObservableObject {
     enum LoadState {
         case loading
         case success(UIImage)
@@ -19,9 +19,11 @@ class ImageLoader: ObservableObject {
 
     private var cancellable: AnyCancellable?
     private let url: URL
+    private let session: ImageLoaderSession
 
-    init(url: URL) {
+    init(url: URL, session: ImageLoaderSession = RealImageLoaderSession()) {
         self.url = url
+        self.session = session
         loadImage()
     }
 
@@ -35,7 +37,7 @@ class ImageLoader: ObservableObject {
 
         let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
 
-        cancellable = URLSession.shared.dataTaskPublisher(for: request)
+        cancellable = session.dataTaskPublisher(for: request)
             .tryMap { data, _ -> UIImage in
                 guard let image = UIImage(data: data) else {
                     throw URLError(.cannotDecodeContentData)
@@ -44,7 +46,7 @@ class ImageLoader: ObservableObject {
             }
             .receive(on: RunLoop.main)
             .sink(receiveCompletion: { [weak self] result in
-                if case .failure(_) = result {
+                if case .failure = result {
                     self?.state = .failure
                 }
             }, receiveValue: { [weak self] image in
